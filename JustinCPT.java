@@ -43,8 +43,8 @@ public class JustinCPT{
 		con.println(strWordProblems);
 		intTestOption = con.readInt();	
 		
-		con.println("ah");
-	
+		con.println("you suc");
+		
 			
 		
 		}
