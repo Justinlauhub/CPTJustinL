@@ -6,7 +6,7 @@ public class JustinCPT{
 		Console con = new Console(1280, 720);	
 	//variables		
 	String strOption;
-	int intTestOption;
+	String strTestOption;
 	String strLinear;
 	String strQuadradics;
 	String strTrig;
@@ -16,10 +16,21 @@ public class JustinCPT{
 	String strName;
 	boolean blnBack;
 	int intPercentage;
-	String strQAAAR;
+	String strQuestion1[][];
+	String strQuestion2;
+	String strAnswer;
+	String strAnswer2;
 	TextInputFile Tests = new TextInputFile("Tests.txt");
 	TextInputFile Scores = new TextInputFile ("highscores.txt");
+	TextInputFile Linear = new TextInputFile ("linear.txt");
+	TextInputFile Quadradics = new TextInputFile ("quadradics.txt");
+	TextInputFile Trig = new TextInputFile ("trig.txt");
+	TextInputFile Algebra = new TextInputFile ("algebra.txt");
+	TextInputFile BasicMath = new TextInputFile("BasicM.txt");
+	int intCountQ = 0;
 	blnBack = true;
+	strOption = "";
+	strTestOption = "";
 	
 	//Main menu / title screen
 	//Loop for cycling back to main program
@@ -35,6 +46,7 @@ public class JustinCPT{
 	con.println("beside the option you want to choose.");
 	strOption = con.readLine();
 	con.clear();
+
 	
 	
 	//Go into tests
@@ -55,38 +67,70 @@ public class JustinCPT{
 		con.println(strTrig);
 		con.println(strShapes);
 		con.println(strWordProblems);
-		intTestOption = con.readInt();	
+		strTestOption = con.readLine();	
 		//B back loop
-		while(con.getChar() != 'b'){
-		System.out.println("Help Test");
-		blnBack = true;
+		//while(con.getChar() == 'b'){
+		//System.out.println("Help Teggst");
+		//blnBack = true;
+		
 	}
 	con.clear();
+	//Linear 
+//Quadradics
+//Trigonometry
+//Shapes
+//Algebra
+//Basic math
+
+		
+	}else if(strTestOption.equalsIgnoreCase("1")){
+		
+		while(Linear.eof() == false){
+			intCountQ = Linear.readInt();
+			strAnswer = Linear.readLine();
+			strAnswer2 = Linear.readLine();
+			intCountQ = intCountQ + 1;
+			con.println(intCountQ);
+			blnBack = false;
+		}
+			con.clear();
+		
+	
 		
 		
-	}
+	//}else if(intTestOption = 2){
+	//}else if(intTestOption = 3){
+	//}else if(intTestOption = 4){
+	//}else if(intTestOption = 5){
+	//}else if(intTestOption = 6){
+	
+		
+		
+	
 	//View highscores
 	}else if(strOption.equalsIgnoreCase("V")){
-		
 		while(Scores.eof() == false){
 			strName = Scores.readLine();
 			strTest = Scores.readLine();
 			intPercentage = Scores.readInt();
-			con.println("Highscores");
+			con.println("Highscores: ");
 			con.println(strName);
 			con.println(strTest);
 			con.println(intPercentage);
-			
+		
 		//B back loop	
 		while(con.getChar() != 'b'){
 		System.out.println("Help Test");
 		blnBack = true;
 	}
 	con.clear();
+}
 	
+
+
 		
 			
-	}		
+			
 	//Quit option 3
 	}else if(strOption.equalsIgnoreCase("Q")){
 		con.println("Thanks for playing Brain Game!");
@@ -115,6 +159,8 @@ public class JustinCPT{
 		con.println("You found my funny little domain cheater…");
 		con.sleep(1000);
 		con.println("While you’re here I might as well tell you one of my hilarious jokes…");
+		con.sleep(1000);
+		con.println("Have you ever noticed what's odd");
 		con.sleep(1000);
 		con.println("...");
 		con.sleep(1000);
@@ -149,20 +195,22 @@ public class JustinCPT{
 		con.println("Code has been successfully registered");
 		con.sleep(2000);
 		con.clear();
+		
 	//Invalid option input
 	}else{
-	blnBack = true;
 	con.println("Invalid option, please try again");
 	blnBack = false;
 	con.sleep(1000);
 	con.clear();
 	blnBack = true;	
 		
-		
+	}	
 	}	
 }	
 }
-}
+
+
+
 
 
 
