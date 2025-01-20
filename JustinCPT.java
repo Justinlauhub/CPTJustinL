@@ -10,27 +10,55 @@ public class JustinCPT{
 	String strLinear;
 	String strQuadradics;
 	String strTrig;
-	String strShapes;
-	String strWordProblems;
+	String strBMath;
 	String strTest;
 	String strName;
 	boolean blnBack;
 	int intPercentage;
-	String strQuestion1[][];
-	String strQuestion2;
-	String strAnswer;
-	String strAnswer2;
+	String strChoice;
+	int intRandom;
+	int intRCount;
+	//arrays
+	String strArrBmath[][];
+	String strArrLinear[][];
+	String strArrQuadradics[][];
+	String strArrTrig[][];
+	String strQuestion[];
+	String strAnswer[];
+	String strAnswer2[];
+	String strAnswer3[];
+	int intArrRandom[];
+
+	strArrBmath = new String [20][4];
+	strArrLinear = new String [20][4];
+	strArrQuadradics = new String [20][4];
+	strArrTrig = new String [20][4];
+	strQuestion = new String [4];
+	strAnswer = new String [4];
+	strAnswer2 = new String [4];
+	strAnswer3 = new String [4];
+	intArrRandom = new int [20];
+	
+	//strArray[0][4] = int
+	
+	
+	
+	//File IO
 	TextInputFile Tests = new TextInputFile("Tests.txt");
 	TextInputFile Scores = new TextInputFile ("highscores.txt");
-	TextInputFile Linear = new TextInputFile ("linear.txt");
-	TextInputFile Quadradics = new TextInputFile ("quadradics.txt");
-	TextInputFile Trig = new TextInputFile ("trig.txt");
-	TextInputFile Algebra = new TextInputFile ("algebra.txt");
+	TextInputFile Linear = new TextInputFile ("Linear.txt");
+	TextInputFile Quadradics = new TextInputFile ("Quadradics.txt");
+	TextInputFile Trig = new TextInputFile ("Trig.txt");
 	TextInputFile BasicMath = new TextInputFile("BasicM.txt");
+	
+	//Initializing variables
 	int intCountQ = 0;
+	int intRow;
+	int intCorrectAnswers = 0;
 	blnBack = true;
 	strOption = "";
 	strTestOption = "";
+	strName = "";
 	
 	//Main menu / title screen
 	//Loop for cycling back to main program
@@ -42,60 +70,106 @@ public class JustinCPT{
 	con.println("> Quit game(Q)");
 	con.println("> Help(H)");
 	con.println("");
-	con.println("To select one of the options, please type the indicated number"); 
+	con.println("To select one of the options, please type the indicated letter"); 
 	con.println("beside the option you want to choose.");
 	strOption = con.readLine();
 	con.clear();
 
 	
 	
-	//Go into tests
+	//Go into tests main file
 	if(strOption.equalsIgnoreCase("P")){
 		con.println("What is your name?");
 		strName = con.readLine();
 		con.clear();
 		while(Tests.eof() == false){
+			strBMath = Tests.readLine();
 			strLinear = Tests.readLine();
 			strQuadradics = Tests.readLine();
 			strTrig = Tests.readLine();
-			strShapes = Tests.readLine();
-			strWordProblems = Tests.readLine();
 		con.println("Hello,"+strName);
 		con.println("Which of these tests would you like to pick?");
+		con.println(strBMath);
 		con.println(strLinear);
 		con.println(strQuadradics);
 		con.println(strTrig);
-		con.println(strShapes);
-		con.println(strWordProblems);
 		strTestOption = con.readLine();	
+		//con.clear();
 		//B back loop
 		//while(con.getChar() == 'b'){
 		//System.out.println("Help Teggst");
-		//blnBack = true;
+		//blnBack = true;	
+	}
+	Tests.close();
+	//break;
+	
+	//If player presses 1	
+	}if(strTestOption.equalsIgnoreCase("1")){
+		//blnBack = false;
+		while(BasicMath.eof() == false){
+			strQuestion[0] = BasicMath.readLine();
+			strAnswer[0] = BasicMath.readLine();
+			strAnswer2[0] = BasicMath.readLine();
+			strAnswer3[0] = BasicMath.readLine();
+			intCountQ = intCountQ + 1;
+			
+			
+		}
+		BasicMath.close();
+	BasicMath = new TextInputFile("BasicM.txt");
+		
+		for(intRow = 0; intRow < intCountQ; intRow++){
+			strArrBmath[intRow][0] = BasicMath.readLine();
+			strArrBmath[intRow][1] = BasicMath.readLine();
+			strArrBmath[intRow][2] = BasicMath.readLine();
+			strArrBmath[intRow][3] = BasicMath.readLine();
+			//intRandom = (int)(Math.random() * 100 + 1);
+			//System.out.println(intRandom);
+			con.println(strName);
+			con.println("Basic math");
+			con.println(strArrBmath[intRow][0]);
+			strChoice = con.readLine();
+			
+			for(intRCount = 0; intRCount <= intArrRandom.length; intRCount++){
+				intArrRandom[intRCount] = intRandom = (int)(Math.random() * 100 + 1);
+				
+			}
+			
+		if(strChoice.equalsIgnoreCase(strArrBmath[intRow][1])||strChoice.equalsIgnoreCase(strArrBmath [intRow][2])||strChoice.equalsIgnoreCase(strArrBmath [intRow][3])){
+			con.println("Correct!");
+			con.sleep(3000);
+			con.clear();	
+			intCorrectAnswers = intCorrectAnswers + 1;
+			
+	
+		}else if(!strChoice.equalsIgnoreCase(strArrBmath[intRow][1])||!strChoice.equalsIgnoreCase(strArrBmath [intRow][2])||!strChoice.equalsIgnoreCase(strArrBmath [intRow][3])){
+			con.println("Incorrect!");
+
+		}
+		intPercentage = (intCorrectAnswers / intCountQ) * 100;
+		con.println("Congrats you completed the test!");
+		con.println("Here are your results:");
+		con.println(strName);
+		//con.println(
+		con.println(intPercentage);
+		
+			
+		//BasicMath.close();
+		blnBack = false;
 		
 	}
-	con.clear();
-	//Linear 
-//Quadradics
-//Trigonometry
-//Shapes
-//Algebra
-//Basic math
 
+
+		//BasicMath.close();
+		//strArray = new String[intCountQ][4];
+	//	int intRow;
+		//for(intRow = 0; intRow < intCountQ; intCountQ++){
+		//}
 		
-	}else if(strTestOption.equalsIgnoreCase("1")){
-		
-		while(Linear.eof() == false){
-			intCountQ = Linear.readInt();
-			strAnswer = Linear.readLine();
-			strAnswer2 = Linear.readLine();
-			intCountQ = intCountQ + 1;
-			con.println(intCountQ);
-			blnBack = false;
-		}
-			con.clear();
+		//con.clear();
 		
 	
+
 		
 		
 	//}else if(intTestOption = 2){
@@ -114,9 +188,9 @@ public class JustinCPT{
 			strTest = Scores.readLine();
 			intPercentage = Scores.readInt();
 			con.println("Highscores: ");
-			con.println(strName);
-			con.println(strTest);
-			con.println(intPercentage);
+			//con.println(strName);
+			//con.println(strTest);
+			//con.println(intPercentage);
 		
 		//B back loop	
 		while(con.getChar() != 'b'){
@@ -170,18 +244,6 @@ public class JustinCPT{
 		con.sleep(1000);
 		con.println("Every other number!");
 		con.sleep(1000);
-		con.println("Before you go, I have a riddle for you that I've heard may grant a special surprise…");
-		con.sleep(1000);
-		con.println("“I’m not a gem, but I’m prized just the same, ");
-		con.sleep(1000);
-		con.println("Found by those who travel, i’m part of the game");
-		con.sleep(1000);
-		con.println("I’m small and light, but i hold great worth");
-		con.sleep(1000);
-		con.println("Collected by wanderers all around the earth");
-		con.sleep(1000);
-		con.println("Type your answer in the main menu if you dare…");
-		con.sleep(1000);
 		con.println("Type b to go back to main screen.");	
 		//con.clear();
 		//B back loop
@@ -190,11 +252,6 @@ public class JustinCPT{
 		blnBack = true;
 	}
 	con.clear();
-	//Secret code for an additional secret test
-	}else if(strOption.equalsIgnoreCase("Treasure")){
-		con.println("Code has been successfully registered");
-		con.sleep(2000);
-		con.clear();
 		
 	//Invalid option input
 	}else{
