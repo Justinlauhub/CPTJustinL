@@ -1,0 +1,44 @@
+if a > 0 the parabola...
+Opens upwards
+is positive
+Goes upwards
+If a < 0, the parabola...
+Opens downward
+is negative
+Goes downwards
+Given y = -2(x + 1)(x - 9), determine the zeros
+(9,0) and (-1,0)
+(-1,0) and (9,0)
+x = -1 and x = 9
+What is the y intercept of h = -5t + 21t + 120
+120
+Hundred twenty
+sum of 120
+True or false. Factored form is the only useful equation for values like zeros
+False
+No
+not true
+What is 2^-1
+1/2
+0.5
+half
+What is 5^-2
+1/25
+1 over 25
+1 divided by 25
+What is made up of the vertex
+AOS and optimal value
+axis of symmetry and optimal value
+Y axis and X axis
+Where is the axis of symmetry on a parabola
+Middle of parabola
+Middle
+Half of the maximum x
+What does the term "break even" mean
+No profit
+income equal to 0
+Total costs equals total revenue
+
+
+
+
