@@ -1,0 +1,40 @@
+True or false. You cannot use SOH CAH TOA for right angle triangles
+false
+no
+disagree
+True or false. The sine law can be used to solve both right and non-right triangles
+True
+yes
+Agree
+Find the value of sin(45°).
+0.707
+Sum of 0.707
+Around 0.707
+Find the value of sin(30°).
+0.5
+sum of 0.5
+1/2
+Simplify: tan(60°) × cos(90°).
+0
+Equal to 0
+Sum of 0
+Evaluate: sin(45°) + cos(45°).
+1.414
+0.707+0.707
+sum of 1.414
+A right triangle has a hypotenuse of 13 cm and one leg measuring 5 cm. Find the missing side
+12cm
+sum of 12cm
+12 cm
+A flagpole casts a shadow of 10 meters when the angle of elevation of the sun is 30°. Find the height of the flagpole.
+5.77m
+5.77 meters
+h = 5.77
+A ramp has an incline angle of 20° and a vertical height of 4 meters. Find the length of the ramp.
+11.7 meters
+11.7m
+length = 11.7
+Name one method to prove a triangle is congruent
+All sides are equal
+2 sides and a contained angle are equal 
+2 angles and a side are equal
