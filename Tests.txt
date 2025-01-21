@@ -1,5 +1,5 @@
-Linear 
-Quadradics
-Trig
-Shapes
-Word problems
+1. Basic math
+2. Linear 
+3. Quadradics
+4. Trigonometry
+
