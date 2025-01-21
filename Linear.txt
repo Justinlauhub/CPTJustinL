@@ -1,0 +1,40 @@
+Find the number: A number increased by 8 equals 15
+x=7
+Seven
+7
+Solve for 2x = 18
+9 
+nine
+Number 9
+Solve the equation: x + 3 = -2
+-5
+Negative 5
+Value of -5
+Is x = 4 the root of the equation 3x / 2 = 6
+Yes
+True
+Right
+if x = 2. Check if 2x - 5 = 7 is true or false
+False
+No
+Wrong
+The sum of two consecutive numbers is 11. Find the numbers
+6 and 5
+6 + 5
+5 and 6
+If 5 is added to twice a number, the result is 29, determine the number
+Number is 12
+12
+x = 12
+Express the equation x = 3y in standard form (ax+by+c=0), find one value, either a, b or c
+a = 1
+b = -3
+c = 0
+Find one of the three solution for the equation 2x + y = 7
+y = 7
+y = 3
+y = 5
+Solve for x: 3x - 12 = 0
+x = 4
+4
+Four
